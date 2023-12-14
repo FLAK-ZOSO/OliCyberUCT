@@ -12,6 +12,23 @@ Other features may be added in the future.
 git clone https://github.com/FLAK-ZOSO/OliCyberUCT
 ```
 
+Consider putting your user token in `token.txt` if you receive the following error.
+
+```py
+Traceback (most recent call last):
+  File "/home/flak-zoso/Documents/GitHub/OliCyberUCT/playerdiff.py", line 12, in <module>
+    user1.get_stats()
+  File "/home/flak-zoso/Documents/GitHub/OliCyberUCT/olicybertools.py", line 13, in get_stats
+    if self.stats["extended"]:
+TypeError: 'NoneType' object is not subscriptable
+```
+
+You can find your user token by logging in to `training.olicyber.it` and looking at the localStorage in your browser's developer tools.
+
+```js
+console.log(localStorage.getItem("token"));
+```
+
 ## Usage
 
 ```md

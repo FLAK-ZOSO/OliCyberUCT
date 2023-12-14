@@ -2,6 +2,7 @@
 from __future__ import annotations
 import requests
 import typing
+session = requests.Session()
 
 
 class User:
@@ -53,10 +54,10 @@ def fetch_user_stats(user_id: int, debug: bool=False) -> dict:
         "accept": "application/json",
         "authority": "training.olicyber.it",
         "accept-language": "it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7",
-        "authorization": "Token 2a499b3a-e3d8-479e-b8a9-b3de126bd098",
+        "authorization": f"Token {open('token.txt').read().strip()}",
         "Referer": f"https://training.olicyber.it/player/{user_id}"
     }
-    response = requests.get(
+    response = session.get(
         f"https://training.olicyber.it/api/scoreboard/player/{user_id}",
         headers=headers
     )
