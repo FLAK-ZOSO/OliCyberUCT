@@ -29,6 +29,8 @@ You can find your user token by logging in to `training.olicyber.it` and looking
 console.log(localStorage.getItem("token"));
 ```
 
+![image](https://github.com/user-attachments/assets/9f628342-2cb7-4983-8ac6-435f72200dfa)
+
 ## Usage
 
 ```md
